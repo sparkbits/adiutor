@@ -5,7 +5,7 @@
         public static function registerClass($className)
         {
             //Business Logic here
-            $path = dirname(__DIR__) . DIRECTORY_SEPARATOR . 'manifest.properties';
+            $path = __DIR__ . DIRECTORY_SEPARATOR . 'manifest.properties';
             if (file_exists($path) == FALSE) {
                 throw new RuntimeException("properties file not found on $path");
             } else {
